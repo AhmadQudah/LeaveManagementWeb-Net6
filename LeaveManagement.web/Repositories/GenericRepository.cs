@@ -8,6 +8,7 @@ namespace LeaveManagement.web.Repositories
     {
         private readonly ApplicationDbContext context;
 
+
         public GenericRepository(ApplicationDbContext Context)
         {
             context = Context;
