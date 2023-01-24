@@ -8,9 +8,11 @@ namespace LeaveManagement.web.Data
 
         [ForeignKey("LeaveTypeId")]
         public LeaveType LeaveType { get; set; }
-        public int LeaveTypeTypeId { get; set; }
+        public int LeaveTypeId { get; set; }
 
         public string EmployeeId { get; set; }
+
+        public int Period { get; set; }
 
     }
 }
