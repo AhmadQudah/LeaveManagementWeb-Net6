@@ -16,6 +16,6 @@ namespace LeaveManagement.web.Models
         [Required]
         [Display(Name = "Allocation Period")]
         public int Period { get; set; }
-        public LeaveTypeVM LeaveType { get; set; }
+        public LeaveTypeVM? LeaveType { get; set; }
     }
 }

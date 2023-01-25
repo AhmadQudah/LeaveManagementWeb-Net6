@@ -41,7 +41,7 @@ namespace LeaveManagement.web.Repositories
                 .Where(q => q.EmployeeId == employeeId).ToListAsync();
             var employee = await userManager.FindByIdAsync(employeeId);
 
-            var employeeAllocationModel = mapper.Map<EmployeeAllocationVM>(employeeId);
+            var employeeAllocationModel = mapper.Map<EmployeeAllocationVM>(employee);
             employeeAllocationModel.LeaveAllocations = mapper.Map<List<LeaveAllocationVM>>(allocations);
 
             return employeeAllocationModel;
@@ -90,6 +90,20 @@ namespace LeaveManagement.web.Repositories
                 
             }
             await AddRangeAsync(allocations);
+        }
+
+        public async Task<bool> UpdateEmployeeAllocations(EditLeaveAllocationVM model)
+        {
+            var leaveAllocation = await GetAsync(model.Id);
+            if (leaveAllocation == null)
+            {
+                return false;
+            }
+            leaveAllocation.Period = model.Period;
+            leaveAllocation.NumberOfDays = model.NumberOfDays;
+            await UpdateAsync(leaveAllocation);
+
+            return true;
         }
     }
 }
