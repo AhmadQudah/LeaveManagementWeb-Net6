@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using LeaveManagement.web.Constants;
+using LeaveManagement.web.Contracts;
+using LeaveManagement.web.Data;
+using LeaveManagement.web.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using LeaveManagement.web.Data;
-using LeaveManagement.web.Models;
-using AutoMapper;
-using LeaveManagement.web.Contracts;
-using Microsoft.AspNetCore.Authorization;
-using LeaveManagement.web.Constants;
 
 namespace LeaveManagement.web.Controllers
 {
@@ -20,7 +15,7 @@ namespace LeaveManagement.web.Controllers
         private readonly ApplicationDbContext _context;
         private readonly ILeaveRequestRepository leaveRequestRepository;
 
-        public LeaveRequestsController(ApplicationDbContext context, ILeaveRequestRepository leaveRequestRepository )
+        public LeaveRequestsController(ApplicationDbContext context, ILeaveRequestRepository leaveRequestRepository)
         {
             _context = context;
             this.leaveRequestRepository = leaveRequestRepository;
@@ -66,7 +61,7 @@ namespace LeaveManagement.web.Controllers
                 throw;
             }
             return RedirectToAction(nameof(Index));
-            
+
         }
 
         [HttpPost]
@@ -91,7 +86,7 @@ namespace LeaveManagement.web.Controllers
             var model = new LeaveRequestCreateVM
             {
                 LeaveTypes = new SelectList(_context.LeaveTypes, "Id", "Name")
-        };
+            };
             return View(model);
         }
 
@@ -118,7 +113,7 @@ namespace LeaveManagement.web.Controllers
             {
                 ModelState.AddModelError(string.Empty, "An Error Has Occurred, Please Try Again Later");
             }
-            
+
             model.LeaveTypes = new SelectList(_context.LeaveTypes, "Id", "Name", model.LeaveTypeId);
             return View(model);
         }
@@ -209,14 +204,14 @@ namespace LeaveManagement.web.Controllers
             {
                 _context.LeaveRequests.Remove(leaveRequest);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool LeaveRequestExists(int id)
         {
-          return _context.LeaveRequests.Any(e => e.Id == id);
+            return _context.LeaveRequests.Any(e => e.Id == id);
         }
     }
 }
