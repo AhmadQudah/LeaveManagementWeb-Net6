@@ -1,0 +1,14 @@
+﻿namespace LeaveManagement.web.Models
+{
+    public class EmployeeLeaveRequestViewVM
+    {
+
+        public EmployeeLeaveRequestViewVM(List<LeaveAllocationVM> leaveAllocations, List<LeaveRequestsVM> leaveRequests)
+        {
+            LeaveAllocations=leaveAllocations;
+            LeaveRequests=leaveRequests;
+        }
+        public List<LeaveAllocationVM> LeaveAllocations { get; set; }
+        public List<LeaveRequestsVM> LeaveRequests { get; set; }
+    }
+}
