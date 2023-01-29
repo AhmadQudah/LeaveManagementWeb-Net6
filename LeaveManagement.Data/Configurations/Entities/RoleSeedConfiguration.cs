@@ -1,9 +1,9 @@
-﻿using LeaveManagement.web.Constants;
+﻿using LeaveManagement.Common.Constants;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace LeaveManagement.web.Configurations.Entities
+namespace LeaveManagement.Data.Configurations.Entities
 {
     public class RoleSeedConfiguration : IEntityTypeConfiguration<IdentityRole>
     {

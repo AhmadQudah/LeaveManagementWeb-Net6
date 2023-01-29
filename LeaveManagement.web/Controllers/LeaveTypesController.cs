@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using LeaveManagement.web.Data;
+using LeaveManagement.Data;
 using AutoMapper;
 using LeaveManagement.web.Models;
 using LeaveManagement.web.Contracts;
 using Microsoft.AspNetCore.Authorization;
-using LeaveManagement.web.Constants;
+using LeaveManagement.Common.Constants;
 
 namespace LeaveManagement.web.Controllers
 {

@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using LeaveManagement.web.Data;
+using LeaveManagement.Data;
 using LeaveManagement.web.Models;
 
 namespace LeaveManagement.web.Configurations

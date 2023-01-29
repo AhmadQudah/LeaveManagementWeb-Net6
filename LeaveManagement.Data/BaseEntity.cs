@@ -1,4 +1,4 @@
-﻿namespace LeaveManagement.web.Data
+﻿namespace LeaveManagement.Data
 {
     public abstract class BaseEntity
     {

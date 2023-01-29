@@ -1,9 +1,8 @@
-﻿using LeaveManagement.web.Data;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace LeaveManagement.web.Configurations.Entities
+namespace LeaveManagement.Data.Configurations.Entities
 {
     public class UserSeedConfiguration : IEntityTypeConfiguration<Employee>
     {
@@ -20,7 +19,7 @@ namespace LeaveManagement.web.Configurations.Entities
                     NormalizedUserName = "AHIQ95@GMAIL.COM",
                     FirstName = "Ahmad",
                     LastName = "Qudah",
-                    PasswordHash = hasher.HashPassword(null,"P@ssw0rd"),
+                    PasswordHash = hasher.HashPassword(null, "P@ssw0rd"),
                     EmailConfirmed = true
                 },
                 new Employee
@@ -33,7 +32,7 @@ namespace LeaveManagement.web.Configurations.Entities
                     FirstName = "Ahmad",
                     LastName = "Test",
                     PasswordHash = hasher.HashPassword(null, "P@ssw0rd"),
-                    EmailConfirmed=true
+                    EmailConfirmed = true
                 }
              );
         }

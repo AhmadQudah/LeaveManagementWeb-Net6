@@ -1,4 +1,4 @@
-﻿using LeaveManagement.web.Data;
+﻿using LeaveManagement.Data;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 

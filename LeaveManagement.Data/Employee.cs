@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace LeaveManagement.web.Data
+namespace LeaveManagement.Data
 {
     public class Employee : IdentityUser
     {

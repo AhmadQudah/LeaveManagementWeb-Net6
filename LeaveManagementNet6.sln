@@ -5,6 +5,10 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeaveManagement.web", "LeaveManagement.web\LeaveManagement.web.csproj", "{03F48938-601D-4EF0-AE7B-96B6BB0D6920}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagement.Data", "LeaveManagement.Data\LeaveManagement.Data.csproj", "{BEE71E9D-C483-421E-90B1-A32476BA4D28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeaveManagement.Common", "LeaveManagement.Common\LeaveManagement.Common.csproj", "{7C6FAB4D-7DB9-49AC-95FF-3859FEC81BE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{03F48938-601D-4EF0-AE7B-96B6BB0D6920}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03F48938-601D-4EF0-AE7B-96B6BB0D6920}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03F48938-601D-4EF0-AE7B-96B6BB0D6920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEE71E9D-C483-421E-90B1-A32476BA4D28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE71E9D-C483-421E-90B1-A32476BA4D28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE71E9D-C483-421E-90B1-A32476BA4D28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE71E9D-C483-421E-90B1-A32476BA4D28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C6FAB4D-7DB9-49AC-95FF-3859FEC81BE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C6FAB4D-7DB9-49AC-95FF-3859FEC81BE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C6FAB4D-7DB9-49AC-95FF-3859FEC81BE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C6FAB4D-7DB9-49AC-95FF-3859FEC81BE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
