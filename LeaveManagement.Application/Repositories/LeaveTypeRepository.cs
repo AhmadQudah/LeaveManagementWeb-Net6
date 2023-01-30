@@ -1,7 +1,7 @@
-﻿using LeaveManagement.web.Contracts;
+﻿using LeaveManagement.Application.Contracts;
 using LeaveManagement.Data;
 
-namespace LeaveManagement.web.Repositories
+namespace LeaveManagement.Application.Repositories
 {
     public class LeaveTypeRepository : GenericRepository<LeaveType>, ILeaveTypeRepository
     {

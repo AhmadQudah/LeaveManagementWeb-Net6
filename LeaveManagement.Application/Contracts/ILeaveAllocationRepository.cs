@@ -1,7 +1,7 @@
 ﻿using LeaveManagement.Data;
-using LeaveManagement.web.Models;
+using LeaveManagement.Common.Models;
 
-namespace LeaveManagement.web.Contracts
+namespace LeaveManagement.Application.Contracts
 {
     public interface ILeaveAllocationRepository : IGenericRepository<LeaveAllocation>
     {

@@ -1,17 +1,15 @@
-﻿using LeaveManagement.Data;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace LeaveManagement.web.Models
+namespace LeaveManagement.Common.Models
 {
     public class LeaveRequestsVM : LeaveRequestCreateVM
     {
         public int Id { get; set; }
 
-        [Display(Name= "Date Requested")]
+        [Display(Name = "Date Requested")]
         public DateTime DateRequested { get; set; }
-        
-        [Display(Name= "Leave Type")]
+
+        [Display(Name = "Leave Type")]
         public LeaveTypeVM LeaveType { get; set; }
         public bool? Approved { get; set; }
         public bool Cancelled { get; set; }

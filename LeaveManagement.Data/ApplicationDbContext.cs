@@ -6,9 +6,24 @@ namespace LeaveManagement.Data
 {
     public class ApplicationDbContext : IdentityDbContext<Employee>
     {
+
+        public ApplicationDbContext()
+        {
+
+        }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(
+                "Server=.;Database=LeaveManagementNet6;Trusted_Connection=True;MultipleActiveResultSets=true");
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -18,6 +33,7 @@ namespace LeaveManagement.Data
             builder.ApplyConfiguration(new UserSeedConfiguration());
             builder.ApplyConfiguration(new UserRoleSeedConfiguration());
         }
+
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

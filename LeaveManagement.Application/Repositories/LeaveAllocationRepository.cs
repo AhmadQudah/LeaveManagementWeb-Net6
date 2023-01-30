@@ -1,14 +1,14 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using LeaveManagement.Common.Constants;
-using LeaveManagement.web.Contracts;
+using LeaveManagement.Application.Contracts;
 using LeaveManagement.Data;
-using LeaveManagement.web.Models;
+using LeaveManagement.Common.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 
-namespace LeaveManagement.web.Repositories
+namespace LeaveManagement.Application.Repositories
 {
     public class LeaveAllocationRepository : GenericRepository<LeaveAllocation>, ILeaveAllocationRepository
     {

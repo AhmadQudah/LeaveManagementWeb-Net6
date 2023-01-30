@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace LeaveManagement.web.Models
+namespace LeaveManagement.Common.Models
 {
     public class EmployeeListVM
     {
